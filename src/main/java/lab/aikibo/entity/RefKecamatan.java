@@ -10,27 +10,23 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "ref_kecamatan")
-@IdClass(RefKecamatan.RefKecamatanPK.class)
+@IdClass(RefKecamatanPK.class)
 @Data
 public class RefKecamatan {
 
     @Id
+    @Column(name="kd_propinsi")
     private String kdPropinsi;
+
     @Id
+    @Column(name = "kd_dati2")
     private String kdDati2;
+
     @Id
+    @Column(name = "kd_kecamatan")
     private String kdKecamatan;
+
     @Column(name="nm_kecamatan")
     private String nmKecamatan;
-
-
-    // -- pk
-
-    @Data
-    public class RefKecamatanPK implements Serializable {
-        private String kdPropinsi;
-        private String kdDati2;
-        private String kdKecamatan;
-    }
 
 }
